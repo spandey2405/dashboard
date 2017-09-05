@@ -1,0 +1,45 @@
+<div class="demo-card-wide mdl-card mdl-shadow--2dp" style="width: 100%">
+    <div class="mdl-card__title">
+        <!--<h2 class="mdl-card__title-text">Player Trillbit : Playing ...</h2>-->
+        <div id="waveform"></div>
+    </div>
+    <div class="mdl-card__supporting-text" id="song_info">
+        Trillbit Player, No Song Playing.
+    </div>
+    <div class="mdl-card__supporting-text">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col" id="tracker">
+                <input class="mdl-slider mdl-js-slider" type="range"
+                       min="0" max="100" value="0" tabindex="0" id="audioTrack" onclick="update_track(this.value)">
+            </div>
+        </div>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col" style="font-size: 30px;" id="">
+                <i class="fa fa-fast-backward controller" aria-hidden="true" onclick="play_previous()"></i>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col controller" style="font-size: 30px;">
+                <i id="playbutton" class="fa fa-play" aria-hidden="true" onclick="playpause()"></i>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col controller" style="font-size: 30px;">
+                <i class="fa fa-fast-forward" aria-hidden="true" onclick="play_next()"></i>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col">
+
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" style="padding: 0">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6" style="top:1px;">
+                            <i class="material-icons">volume_down</i>
+                        </label>
+                        <div style="padding-top: 7px" id="volume">
+                            <input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="25" tabindex="0" id="volume_control" onclick="update_vol()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
